@@ -25,6 +25,6 @@
     "shortTitle": "portfolio website",
     "experience": "Tailwind, React",
     "desc": "That's this site! It is intended to be a simple place for me to dump my projects and talk about my experience. It was created with ReactJS and Tailwind for the styling, hosted on GitHub Pages. Previous versions were created with vanilla web stack tech, but I suck at CSS, and Tailwind has been refreshing to work with. The repo for the site can be found below.",
-    "links": ["https://jofbob.itch.io"]
+    "links": ["https://github.com/jofb/portfolio"]
   }
 ]
