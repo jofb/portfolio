@@ -17,9 +17,23 @@ function Project(props) {
     },
   ];
 
+  // animation
   const animInitTitle = { x: 50, opacity: 0 };
   const animInitBody = { x: 60, opacity: 0 };
   const animDefault = { x: 0, opacity: 1, width: "100%" };
+
+  const body = project.desc.split("\n").map((s, i) => (
+    <motion.div
+      animate={animDefault}
+      initial={animInitBody}
+      transition={{ delay: 0.1, duration: 0.6 + i * 0.1, ease: "easeOut" }}
+    >
+      <p className="text-gray-300 text-lg">{s}</p>
+      <div className="leading-3">
+        <br />
+      </div>
+    </motion.div>
+  ));
 
   const links = project.links.map((s, i) => (
     <a
@@ -58,19 +72,24 @@ function Project(props) {
             {project.experience}
           </p>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           animate={animDefault}
           initial={animInitBody}
           transition={{ delay: 0.1, duration: 0.6, ease: "easeOut" }}
-        >
-          <p className="text-gray-300 text-lg">{project.desc}</p>
-        </motion.div>
+        > */}
+        {body}
+        {/* </motion.div> */}
         <motion.div
           animate={animDefault}
           initial={animInitBody}
-          transition={{ delay: 0.1, duration: 0.7, ease: "easeOut" }}
+          transition={{
+            delay: 0.1,
+            duration: 0.6 + body.length * 0.1,
+            ease: "easeOut",
+          }}
+          className="pt-2"
         >
-          <div className="pt-5">{links}</div>
+          <div>{links}</div>
         </motion.div>
       </section>
     </motion.div>

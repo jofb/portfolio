@@ -9,8 +9,8 @@ function About() {
         transition={{ duration: 0.2, ease: "easeIn" }}
       >
         <motion.div
-          animate={{ x: 0, opacity: 1, width: "100%" }}
-          initial={{ x: 40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: 40, opacity: 0 }}
           transition={{ delay: 0.1, duration: 0.4, ease: "easeOut" }}
         >
           <h1 className="text-gray-300 text-5xl mb-5 font-bold">
@@ -18,8 +18,8 @@ function About() {
           </h1>
         </motion.div>
         <motion.div
-          animate={{ x: 0, opacity: 1, width: "100%" }}
-          initial={{ x: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: 50, opacity: 0 }}
           transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
         >
           <p className="text-gray-300 text-lg">
@@ -27,8 +27,14 @@ function About() {
             portfolio website where some of the things I've worked on can be
             found. I am passionate about learning more about all facets of
             computer science! Including full stack web development, game
-            development, and systems programming. The site is still a work in
-            progress (pictures coming soon!).
+            development, and systems programming.
+          </p>
+          <div className="leading-3">
+            <br />
+          </div>
+          <p className="text-gray-300 text-lg">
+            The site is still a work in progress (pictures coming soon). Check
+            out some of my projects on the sidebar to the left!
           </p>
         </motion.div>
       </motion.section>

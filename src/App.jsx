@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { useLocation } from "react-router-dom";
 
 import projects from "./assets/projects_list.json";
