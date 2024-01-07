@@ -16,8 +16,8 @@
   {
     "title": "Advent of Code",
     "shortTitle": "advent of code",
-    "experience": "Java, Python, Javascript, C",
-    "desc": "The Advent of Code is an annual programming puzzle/problem solving event hosted at [adventofcode.com], comprised of 25 daily puzzles to emulate an advent calender. I started doing these in 2023, and have worked through previous years as exercises in learning more about algorithms and problem solving. \nCurrently I have completed 2023 in Java and am working on 2022 in Javascript. Links to my attempts can be found below on my Github.",
+    "experience": "Java, Javascript",
+    "desc": "The Advent of Code is an annual programming puzzle/problem solving event hosted at [adventofcode.com], comprised of 25 daily puzzles to emulate an advent calender. I started doing these in 2023, and have worked through previous years as exercises in learning more about algorithms and problem solving. \nCurrently I have completed 2023 in Java and am working on 2022 in Javascript. Links to my attempts can be found below through Github repos.",
     "links": ["https://github.com/jofb/advent-of-code-23"]
   },
   {
