@@ -20,10 +20,12 @@ function Contacts() {
       href={contact[1]}
       target="_blank"
       rel="noopener noreferrer"
+      key={i}
     >
       <FontAwesomeIcon
         icon={contact[2]}
         className="text-slate-200 text-4xl hover:text-yellow-400"
+        key={i}
       />
     </a>
   ));
