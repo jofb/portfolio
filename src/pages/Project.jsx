@@ -38,7 +38,7 @@ function Project(props) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2, ease: "easeIn" }}
     >
-      <section className="p-10">
+      <section className="pl-16 pr-20 pt-8">
         <motion.div
           animate={animDefault}
           initial={animInitTitle}
