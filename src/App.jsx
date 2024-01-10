@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 
 function App() {
-  const [navVis, setNavVis] = useState(false);
+  const [navVis, setNavVis] = useState(true);
   const location = useLocation().pathname;
 
   const toggleNavBar = () => {

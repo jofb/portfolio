@@ -66,29 +66,6 @@ function Navbar({ navVis, setNavVis, projects, location }) {
       <Contacts />
     </motion.nav>
   );
-  //   <nav className="flex flex-col h-full bg-[#334DE0] shadow-2xl whitespace-nowrap absolute sm:flex">
-  //     <Link to="/">
-  //       <button
-  //         className={
-  //           (location === "/"
-  //             ? "bg-yellow-400 text-black shadow-lg"
-  //             : "text-white") +
-  //           " text-2xl hover:bg-slate-200 hover:text-black hover:shadow-lg transition ease-out delay-50 px-3 p-2 font-medium text-left w-full"
-  //         }
-  //       >
-  //         about
-  //       </button>
-  //     </Link>
-
-  //     <h1 className="text-4xl w-min text-white font-bold px-3 p-2 select-none after:relative after:block after:left-[110%] after:top-[-40%] after:bg-white after:h-0.5 after:w-14 after:z-20">
-  //       projects
-  //     </h1>
-
-  //     {projectLinks}
-
-  //     <Contacts />
-  //   </nav>
-  // );
 }
 
 export default Navbar;
