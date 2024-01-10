@@ -5,9 +5,8 @@ import { AnimatePresence } from "framer-motion";
 import Project from "../pages/Project";
 import About from "../pages/About";
 
-function ProjectRoutes(props) {
+function ProjectRoutes({ projects }) {
   const location = useLocation();
-  const projects = props.projects;
   // create each project page
   const pages = projects.map((p, i) => <Project project={p} key={i} />);
   // create routes for each project

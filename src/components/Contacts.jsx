@@ -31,7 +31,7 @@ function Contacts() {
   ));
   return (
     <div className="mt-auto p-5 select-none">
-      <p className="text-xl m-auto text-slate-200 w-min font-light">
+      <p className="text-xl m-auto text-slate-200 text-center font-light">
         Contact Me
       </p>
       <div className="pt-4 flex flex-row justify-around">{contactIcons}</div>

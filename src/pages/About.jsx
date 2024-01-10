@@ -4,7 +4,7 @@ function About() {
   return (
     <>
       <motion.section
-        className="pl-16 pr-20 pt-8 overflow-hidden"
+        className="pl-8 md:pl-16 pr-8 md:pr-20 pt-8"
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2, ease: "easeIn" }}
       >
@@ -13,7 +13,7 @@ function About() {
           initial={{ y: 40, opacity: 0 }}
           transition={{ delay: 0.1, duration: 0.4, ease: "easeOut" }}
         >
-          <h1 className="text-gray-300 text-5xl mb-5 font-bold">
+          <h1 className="text-gray-300 text-4xl sm:text-5xl mb-5 font-bold">
             Hi, I'm Jordan
           </h1>
         </motion.div>

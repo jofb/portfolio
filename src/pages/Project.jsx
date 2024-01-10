@@ -27,8 +27,9 @@ function Project(props) {
       animate={animDefault}
       initial={animInitBody}
       transition={{ delay: 0.1, duration: 0.6 + i * 0.1, ease: "easeOut" }}
+      key={i}
     >
-      <p className="text-gray-300 text-lg">{s}</p>
+      <p className="text-gray-300 sm:text-lg">{s}</p>
       <div className="leading-3">
         <br />
       </div>
@@ -48,17 +49,17 @@ function Project(props) {
 
   return (
     <motion.div
-      className="overflow-hidden"
+      className="overflow-hidden bg-slate-800"
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2, ease: "easeIn" }}
     >
-      <section className="pl-16 pr-20 pt-8">
+      <section className="pl-8 md:pl-16 pr-8 md:pr-20 pt-8">
         <motion.div
           animate={animDefault}
           initial={animInitTitle}
           transition={{ delay: 0.1, duration: 0.4, ease: "easeOut" }}
         >
-          <h1 className="text-gray-200 text-4xl mb-1 font-bold">
+          <h1 className="text-gray-200 text-3xl sm:text-4xl mb-1 font-bold">
             {project.title}
           </h1>
         </motion.div>
