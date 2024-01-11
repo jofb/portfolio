@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Header({ navVis, setNavVis }) {
   return (
-    <div className="bg-[#E407C1] py-3 sm:py-5 p-2 shadow-xl z-50 sticky top-0 flex flex-row justify-between">
+    <div className="bg-[#E407C1] py-3 sm:py-5 p-2 shadow-xl z-50 sticky top-0 flex flex-row justify-between sm:h-[6.25rem]">
       <h1 className="text-white text-3xl font-light select-none sm:text-5xl md:text-6xl">
         Jordan Wylde-Browne
       </h1>

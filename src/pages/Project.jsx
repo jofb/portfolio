@@ -49,7 +49,7 @@ function Project(props) {
 
   return (
     <motion.div
-      className="overflow-hidden bg-slate-800"
+      className="overflow-x-hidden bg-slate-800"
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2, ease: "easeIn" }}
     >

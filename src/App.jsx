@@ -17,7 +17,7 @@ function App() {
   };
   return (
     <>
-      <div className="bg-slate-800 h-screen flex flex-col">
+      <div className="bg-slate-800 min-h-screen relative">
         <Header navVis={navVis} setNavVis={toggleNavBar} />
 
         <div className="flex flex-row w-full h-full">

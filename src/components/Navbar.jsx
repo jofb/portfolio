@@ -25,7 +25,7 @@ function Navbar({ navVis, setNavVis, projects, location }) {
 
   const variants = {
     open: {
-      height: "100%",
+      height: "min-content",
       transition: { duration: 0.4, ease: "easeOut" },
     },
     close: {
@@ -40,7 +40,7 @@ function Navbar({ navVis, setNavVis, projects, location }) {
       initial={{ height: 0 }}
       variants={variants}
       className={
-        "z-40 flex absolute h-full bg-[#334DE0] overflow-hidden sm:overflow-visible shadow-2xl sm:whitespace-nowrap text-3xl sm:!h-full font-light flex-col w-full sm:text-2xl sm:sticky sm:w-min"
+        "z-40 flex fixed bg-[#334DE0] overflow-hidden sm:overflow-visible shadow-2xl sm:whitespace-nowrap text-3xl sm:!h-[calc(100vh_-_6.25rem)] font-light flex-col w-full sm:text-2xl sm:sticky sm:top-[6.25rem] sm:w-min"
       }
     >
       <Link to="/">
