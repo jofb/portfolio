@@ -34,7 +34,8 @@ function About() {
           </div>
           <p className="text-gray-300 text-lg">
             The site is still a work in progress (pictures coming soon). Check
-            out some of my projects on the sidebar to the left!
+            out some of my projects on the sidebar to the left! (Or on mobile,
+            the menu at the top)
           </p>
         </motion.div>
       </motion.section>
