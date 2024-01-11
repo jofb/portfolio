@@ -24,7 +24,7 @@ function Contacts() {
     >
       <FontAwesomeIcon
         icon={contact[2]}
-        className="text-slate-200 text-4xl hover:text-yellow-400"
+        className="text-slate-200 text-4xl hover:text-yellow-400 px-4"
         key={i}
       />
     </a>
@@ -34,7 +34,7 @@ function Contacts() {
       <p className="text-xl m-auto text-slate-200 text-center font-light">
         Contact Me
       </p>
-      <div className="pt-4 flex flex-row justify-around">{contactIcons}</div>
+      <div className="pt-4 flex flex-row justify-center">{contactIcons}</div>
     </div>
   );
 }

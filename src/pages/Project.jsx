@@ -1,19 +1,28 @@
 import { motion } from "framer-motion";
+import Carousel from "../components/Carousel";
 
 function Project(props) {
   const project = props.project;
   const images = [
     {
-      original: "https://picsum.photos/id/1018/1000/600/",
-      thumbnail: "https://picsum.photos/id/1018/250/150/",
+      image:
+        "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
+      caption: "hello this is image 1, its super cool!",
     },
     {
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/250/150/",
+      image:
+        "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
+      caption: "hello this is image 2, its super cool!",
     },
     {
-      original: "https://picsum.photos/id/1019/1000/600/",
-      thumbnail: "https://picsum.photos/id/1019/250/150/",
+      image:
+        "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
+      caption: "hello this is image 3, its super cool!",
+    },
+    {
+      image:
+        "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
+      caption: "hello this is image 4, its super cool!",
     },
   ];
 
@@ -73,13 +82,16 @@ function Project(props) {
             {project.experience}
           </p>
         </motion.div>
-        {/* <motion.div
+        <motion.div
+          className="mb-5"
           animate={animDefault}
-          initial={animInitBody}
-          transition={{ delay: 0.1, duration: 0.6, ease: "easeOut" }}
-        > */}
+          initial={animInitTitle}
+          transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
+        >
+          <Carousel slides={images} />
+        </motion.div>
+
         {body}
-        {/* </motion.div> */}
         <motion.div
           animate={animDefault}
           initial={animInitBody}
