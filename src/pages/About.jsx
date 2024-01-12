@@ -21,9 +21,10 @@ function About() {
           animate={{ y: 0, opacity: 1 }}
           initial={{ y: 50, opacity: 0 }}
           transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
+          className="lg:pr-32"
         >
           <p className="text-gray-300 text-lg">
-            I am a recent Comp Sci student from Tasmania, Australia. This is my
+            I am a recent Comp Sci graduate from Tasmania, Australia. This is my
             portfolio website where some of the things I've worked on can be
             found. I am passionate about learning more about all facets of
             computer science! Including full stack web development, game
@@ -33,9 +34,8 @@ function About() {
             <br />
           </div>
           <p className="text-gray-300 text-lg">
-            The site is still a work in progress (pictures coming soon). Check
-            out some of my projects on the sidebar to the left! (Or on mobile,
-            the menu at the top)
+            The site is still a work in progress. Check out some of my projects
+            on the sidebar to the left! (Or on mobile, the menu at the top)
           </p>
         </motion.div>
       </motion.section>

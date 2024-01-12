@@ -1,30 +1,8 @@
 import { motion } from "framer-motion";
 import Carousel from "../components/Carousel";
 
-function Project(props) {
-  const project = props.project;
-  const images = [
-    {
-      image:
-        "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
-      caption: "hello this is image 1, its super cool!",
-    },
-    {
-      image:
-        "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
-      caption: "hello this is image 2, its super cool!",
-    },
-    {
-      image:
-        "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
-      caption: "hello this is image 3, its super cool!",
-    },
-    {
-      image:
-        "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
-      caption: "hello this is image 4, its super cool!",
-    },
-  ];
+function Project({ project }) {
+  const images = project.images;
 
   // animation
   const animInitTitle = { x: 50, opacity: 0 };
@@ -38,7 +16,7 @@ function Project(props) {
       transition={{ delay: 0.1, duration: 0.6 + i * 0.1, ease: "easeOut" }}
       key={i}
     >
-      <p className="text-gray-300 sm:text-lg">{s}</p>
+      <p className="text-gray-300 sm:text-lg xl:pr-32">{s}</p>
       <div className="leading-3">
         <br />
       </div>
@@ -55,6 +33,18 @@ function Project(props) {
       {s}
     </a>
   ));
+
+  const carousel =
+    images.length > 0 ? (
+      <motion.div
+        className="mb-5"
+        animate={animDefault}
+        initial={animInitTitle}
+        transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
+      >
+        <Carousel slides={images} />
+      </motion.div>
+    ) : null;
 
   return (
     <motion.div
@@ -82,16 +72,11 @@ function Project(props) {
             {project.experience}
           </p>
         </motion.div>
-        <motion.div
-          className="mb-5"
-          animate={animDefault}
-          initial={animInitTitle}
-          transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
-        >
-          <Carousel slides={images} />
-        </motion.div>
+
+        {carousel}
 
         {body}
+
         <motion.div
           animate={animDefault}
           initial={animInitBody}

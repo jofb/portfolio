@@ -23,7 +23,7 @@ function Carousel({ slides }) {
 
   return (
     <div>
-      <div className="overflow-hidden relative max-w-[640px]">
+      <div className="overflow-hidden relative max-w-[640px] max-h-[360px] rounded-lg">
         <div
           className={`flex transition ease-out duration-700`}
           style={{
@@ -31,38 +31,57 @@ function Carousel({ slides }) {
           }}
         >
           {images.map((s) => {
-            return <img src={s} className="rounded-lg" />;
+            return <img src={s} />;
           })}
         </div>
+        {/* if there's only one image, don't render controls */}
+        {images.length > 1 ? (
+          <div>
+            <div className="absolute top-0 h-full w-full justify-between items-center flex text-white text-4xl px-4">
+              <button onClick={previousSlide} className="hover:text-yellow-400">
+                <FontAwesomeIcon icon={faChevronCircleLeft} />
+              </button>
+              <button onClick={nextSlide} className="hover:text-yellow-400">
+                <FontAwesomeIcon icon={faChevronCircleRight} />
+              </button>
+            </div>
 
-        <div className="absolute top-0 h-full w-full justify-between items-center flex text-white px-8 text-3xl">
-          <button onClick={previousSlide} className="hover:text-yellow-400">
-            <FontAwesomeIcon icon={faChevronCircleLeft} />
-          </button>
-          <button onClick={nextSlide} className="hover:text-yellow-400">
-            <FontAwesomeIcon icon={faChevronCircleRight} />
-          </button>
-        </div>
-
-        <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
-          {images.map((s, i) => {
+            <div className="absolute bottom-0 pt-2 flex justify-center gap-3 w-full">
+              <div className="flex justify-center bg-slate-800 gap-3 p-2 rounded-t-md shadow-lg">
+                {images.map((s, i) => {
+                  return (
+                    <div
+                      onClick={() => {
+                        setCurrent(i);
+                      }}
+                      key={"circle" + i}
+                      className={`rounded-full w-4 h-4 cursor-pointer shadow-xl  ${
+                        i == current ? "bg-yellow-400" : "bg-gray-500"
+                      }`}
+                    ></div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        ) : null}
+      </div>
+      <div className="overflow-hidden relative pt-2 max-w-[640px]">
+        <div
+          className="flex transition ease-out duration-700 w-full"
+          style={{
+            transform: `translateX(-${current * 100}%)`,
+          }}
+        >
+          {captions.map((c) => {
             return (
-              <div
-                onClick={() => {
-                  setCurrent(i);
-                }}
-                key={"circle" + i}
-                className={`rounded-full w-3 h-3 cursor-pointer  ${
-                  i == current ? "bg-white" : "bg-gray-500"
-                }`}
-              ></div>
+              <p className="text-[15px] text-gray-500 font-medium min-w-full">
+                {c}
+              </p>
             );
           })}
         </div>
       </div>
-      <p className="text-gray-500 text-[15px] font-medium pt-2">
-        {captions[current]}
-      </p>
     </div>
   );
 }
