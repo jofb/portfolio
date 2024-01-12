@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // https://github.com/AyyazTech/create-carousel-slider-in-Tailwind-css-and-React-js/blob/main/
 function Carousel({ slides }) {
   let [current, setCurrent] = useState(0);
+  let [fullScreen, setFullScreen] = useState(false);
 
   const images = slides.map((s, i) => s.image);
   const captions = slides.map((s, i) => s.caption);
@@ -22,23 +23,45 @@ function Carousel({ slides }) {
     else setCurrent(current + 1);
   };
 
+  const toggleFullScreen = () => {
+    setFullScreen(!fullScreen);
+  };
+
+  const imgView = fullScreen ? (
+    <div
+      className={
+        "fixed top-[3rem] left-0 h-screen w-screen bg-[#000000ad] flex justify-center items-center cursor-pointer z-40"
+      }
+    >
+      <img
+        src={images[current]}
+        alt={captions[current]}
+        className="max-w-full max-h-full rounded-lg"
+      />
+    </div>
+  ) : null;
+
   return (
     <div>
+      {imgView}
       <div className="overflow-hidden relative max-w-[640px] max-h-[360px] rounded-lg">
         <div
           className={`flex transition ease-out duration-700`}
           style={{
             transform: `translateX(-${current * 100}%)`,
           }}
+          onClick={toggleFullScreen}
         >
           {images.map((s, i) => {
-            return <img src={s} loading="lazy" key={i} />;
+            return (
+              <img src={s} alt={captions[current]} loading="lazy" key={i} />
+            );
           })}
         </div>
         {/* if there's only one image, don't render controls */}
         {images.length > 1 ? (
           <div>
-            <div className="absolute top-0 h-full w-full justify-between items-center flex text-white text-3xl px-2">
+            <div className="absolute top-0 h-full w-full justify-between items-center flex text-white text-xl sm:text-2xl px-2">
               <button
                 onClick={previousSlide}
                 className="hover:text-yellow-400 "
@@ -46,24 +69,24 @@ function Carousel({ slides }) {
                 <span className="fa-layers fa-fw fa-lg">
                   <FontAwesomeIcon
                     icon={faCircle}
-                    className="text-5xl text-slate-800"
+                    className="text-3xl sm:text-4xl text-slate-800"
                   />
-                  <FontAwesomeIcon icon={faChevronLeft} />
+                  <FontAwesomeIcon icon={faChevronLeft} className="fa-xs" />
                 </span>
               </button>
               <button onClick={nextSlide} className="hover:text-yellow-400">
                 <span className="fa-layers fa-fw fa-lg">
                   <FontAwesomeIcon
                     icon={faCircle}
-                    className="text-5xl text-slate-800"
+                    className="text-3xl sm:text-4xl text-slate-800"
                   />
-                  <FontAwesomeIcon icon={faChevronRight} />
+                  <FontAwesomeIcon icon={faChevronRight} className="fa-xs" />
                 </span>
               </button>
             </div>
 
-            <div className="absolute bottom-0 pt-2 flex justify-center gap-3 w-full">
-              <div className="flex justify-center bg-slate-800 gap-3 p-2 rounded-t-md shadow-lg">
+            <div className="absolute bottom-0 pt-2 flex justify-center w-full">
+              <div className="flex justify-center bg-slate-800 gap-2 sm:gap-3 pb-1 p-2 rounded-t-md shadow-lg">
                 {images.map((s, i) => {
                   return (
                     <div
@@ -71,7 +94,7 @@ function Carousel({ slides }) {
                         setCurrent(i);
                       }}
                       key={"circle" + i}
-                      className={`rounded-full w-4 h-4 cursor-pointer shadow-xl  ${
+                      className={`rounded-full w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 cursor-pointer shadow-xl  ${
                         i == current ? "bg-yellow-400" : "bg-gray-500"
                       }`}
                     ></div>
@@ -92,7 +115,7 @@ function Carousel({ slides }) {
           {captions.map((c, i) => {
             return (
               <p
-                className="text-[15px] text-gray-500 font-medium min-w-full"
+                className="text-[12px] sm:text-[15px] text-gray-500 font-medium min-w-full"
                 key={i}
               >
                 {c}

@@ -52,7 +52,7 @@ function Project({ project }) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2, ease: "easeIn" }}
     >
-      <section className="pl-8 md:pl-16 pr-8 md:pr-20 pt-8">
+      <section className="px-6 py-8 md:pl-16 md:pr-20">
         <motion.div
           animate={animDefault}
           initial={animInitTitle}
@@ -93,31 +93,4 @@ function Project({ project }) {
     </motion.div>
   );
 }
-// {
-//   /* <ImageGallery items={images} /> */
-// }
-// {
-//   /* <div className="">
-//   <Carousel className="m-auto" width={"50%"}>
-//     <div>
-//       <img
-//         src="https://heapsgoodpackaging.com.au/cdn/shop/articles/HG_Blog_-_Why_We_Need_To_Save_The_Bees_685dacc4-ce36-497f-8abd-ee84b0f2179f.png"
-//         alt=""
-//       />
-//     </div>
-//     <div>
-//       <img
-//         src="https://heapsgoodpackaging.com.au/cdn/shop/articles/HG_Blog_-_Why_We_Need_To_Save_The_Bees_685dacc4-ce36-497f-8abd-ee84b0f2179f.png"
-//         alt=""
-//       />
-//     </div>
-//   </Carousel>
-// </div> */
-// }
-// {
-//   /* then some images */
-// }
-// {
-//   /* then some paragraphs */
-// }
 export default Project;
