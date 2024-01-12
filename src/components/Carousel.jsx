@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
-import { faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // adapted from
@@ -30,19 +31,34 @@ function Carousel({ slides }) {
             transform: `translateX(-${current * 100}%)`,
           }}
         >
-          {images.map((s) => {
-            return <img src={s} />;
+          {images.map((s, i) => {
+            return <img src={s} loading="lazy" key={i} />;
           })}
         </div>
         {/* if there's only one image, don't render controls */}
         {images.length > 1 ? (
           <div>
-            <div className="absolute top-0 h-full w-full justify-between items-center flex text-white text-4xl px-4">
-              <button onClick={previousSlide} className="hover:text-yellow-400">
-                <FontAwesomeIcon icon={faChevronCircleLeft} />
+            <div className="absolute top-0 h-full w-full justify-between items-center flex text-white text-3xl px-2">
+              <button
+                onClick={previousSlide}
+                className="hover:text-yellow-400 "
+              >
+                <span className="fa-layers fa-fw fa-lg">
+                  <FontAwesomeIcon
+                    icon={faCircle}
+                    className="text-5xl text-slate-800"
+                  />
+                  <FontAwesomeIcon icon={faChevronLeft} />
+                </span>
               </button>
               <button onClick={nextSlide} className="hover:text-yellow-400">
-                <FontAwesomeIcon icon={faChevronCircleRight} />
+                <span className="fa-layers fa-fw fa-lg">
+                  <FontAwesomeIcon
+                    icon={faCircle}
+                    className="text-5xl text-slate-800"
+                  />
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </span>
               </button>
             </div>
 
@@ -73,9 +89,12 @@ function Carousel({ slides }) {
             transform: `translateX(-${current * 100}%)`,
           }}
         >
-          {captions.map((c) => {
+          {captions.map((c, i) => {
             return (
-              <p className="text-[15px] text-gray-500 font-medium min-w-full">
+              <p
+                className="text-[15px] text-gray-500 font-medium min-w-full"
+                key={i}
+              >
                 {c}
               </p>
             );

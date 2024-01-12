@@ -3,9 +3,22 @@
     "title": "Spoken Language Identification using ML",
     "shortTitle": "spoken language ml",
     "experience": "Python, TensorFlow, Flutter",
-    "desc": "As part of my final project of my undergrad, I worked with a team of 6 to complete a project working with the State Emergency Service in Tasmania. The aim of the project was to create a mobile application capable of identifying spoken language using machine learning, to aid non-English-speaking crash site victims. Because of the context, the application was also expected to work offline, meaning implementation of on-device machine learning inference. \nThis produced an incredibly unique project, one which is capable of performing language identification on recorded audio on device. The app is implemented using Flutter, with a model trained in TensorFlow. The project was invaluable for collaborative and development experience. \nDue to privacy concerns from the SES, the project is not open source, and so no repo can be provided.",
+    "desc": "As part of my final project of my undergrad, I worked with a team of 6 to complete a project working with the State Emergency Service (SES) in Tasmania. The aim of the project was to create a mobile application capable of identifying spoken language using machine learning, to aid non-English-speaking crash site victims. Because of the context, the application was also expected to work offline, requiring implementation of on-device machine learning inference. Additionally, the SES required the app to facilitate communication with casualties on site via audio questions in their spoken language.\nThis produced an incredibly unique project, one which is capable of performing language identification on recorded audio on device. The app is implemented using Flutter, with a model trained in TensorFlow. The model is then ran directly inside Flutter, with all audio transformations being completed inside the app. The project was invaluable for collaborative and development experience. \nDue to privacy concerns from the SES, the project is not open source, and so no repo can be provided.",
     "links": [],
-    "images": []
+    "images": [
+      {
+        "image": "https://imgur.com/UTRTk2y.png",
+        "caption": "The app prompts casualties to speak their language into a tablet which will record the audio and identify the language spoken"
+      },
+      {
+        "image": "https://imgur.com/w8jduln.png",
+        "caption": "Once a language is identified, SES responders can use prerecorded audio questions to assess casualties"
+      },
+      {
+        "image": "https://imgur.com/k3LxbeW.png",
+        "caption": "Settings page for the application"
+      }
+    ]
   },
   {
     "title": "Game Dev",
