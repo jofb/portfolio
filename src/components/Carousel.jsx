@@ -10,8 +10,8 @@ function Carousel({ slides }) {
   let [current, setCurrent] = useState(0);
   let [fullScreen, setFullScreen] = useState(false);
 
-  const images = slides.map((s, i) => s.image);
-  const captions = slides.map((s, i) => s.caption);
+  const images = slides.map((s) => s.image);
+  const captions = slides.map((s) => s.caption);
 
   let previousSlide = () => {
     if (current === 0) setCurrent(images.length - 1);
@@ -86,7 +86,7 @@ function Carousel({ slides }) {
             </div>
 
             <div className="absolute bottom-0 pt-2 flex justify-center w-full">
-              <div className="flex justify-center bg-slate-800 gap-2 sm:gap-3 pb-1 p-2 rounded-t-md shadow-lg">
+              <div className="flex justify-center bg-slate-800 gap-2 sm:gap-3 pb-1 p-2 rounded-t-lg shadow-lg">
                 {images.map((s, i) => {
                   return (
                     <div
@@ -94,8 +94,8 @@ function Carousel({ slides }) {
                         setCurrent(i);
                       }}
                       key={"circle" + i}
-                      className={`rounded-full w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 cursor-pointer shadow-xl  ${
-                        i == current ? "bg-yellow-400" : "bg-gray-500"
+                      className={`rounded-full w-2 h-2 sm:w-3 sm:h-3 cursor-pointer shadow-xl  ${
+                        i == current ? "bg-white" : "bg-gray-500"
                       }`}
                     ></div>
                   );
