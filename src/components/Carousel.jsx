@@ -64,7 +64,7 @@ function Carousel({ slides }) {
             <div className="absolute top-0 h-full w-full justify-between items-center flex text-white text-xl sm:text-2xl px-2">
               <button
                 onClick={previousSlide}
-                className="hover:text-yellow-400 "
+                className="sm:hover:text-yellow-400 "
               >
                 <span className="fa-layers fa-fw fa-lg">
                   <FontAwesomeIcon
@@ -74,7 +74,7 @@ function Carousel({ slides }) {
                   <FontAwesomeIcon icon={faChevronLeft} className="fa-xs" />
                 </span>
               </button>
-              <button onClick={nextSlide} className="hover:text-yellow-400">
+              <button onClick={nextSlide} className="sm:hover:text-yellow-400">
                 <span className="fa-layers fa-fw fa-lg">
                   <FontAwesomeIcon
                     icon={faCircle}

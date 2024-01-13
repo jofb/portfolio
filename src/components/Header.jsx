@@ -7,10 +7,10 @@ function Header({ navVis, setNavVis }) {
       <h1 className="text-white text-3xl font-light select-none sm:text-6xl">
         Jordan Wylde-Browne
       </h1>
-      <button className=" p-2 py-1 sm:hidden" onClick={setNavVis}>
+      <button className="p-2 py-1 sm:hidden" onClick={setNavVis} title="Menu">
         <FontAwesomeIcon
           icon={navVis ? faBars : faXmark}
-          className="text-slate-200 text-3xl hover:text-yellow-400"
+          className="text-slate-200 text-3xl sm:hover:text-yellow-400"
         />
       </button>
     </div>
