@@ -27,7 +27,7 @@ function Project({ project }) {
     <a
       href={s}
       key={i}
-      className="text-blue-500 underline visited:text-purple-400"
+      className="text-blue-500 underline visited:text-purple-400 pb-1"
       target="_blank"
     >
       {s}
@@ -87,7 +87,7 @@ function Project({ project }) {
           }}
           className="pt-2"
         >
-          <div>{links}</div>
+          <div className="flex flex-col">{links}</div>
         </motion.div>
       </section>
     </motion.div>
