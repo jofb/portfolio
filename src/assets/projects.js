@@ -56,11 +56,12 @@ const projects = [
   {
     title: "Advent of Code",
     shortTitle: "advent of code",
-    experience: "Java, Python",
-    desc: "The Advent of Code is an annual programming puzzle/problem solving event hosted at [adventofcode.com], comprised of 25 daily puzzles to emulate an advent calender. I started doing these in 2023, and have worked through previous years as exercises in learning more about algorithms and problem solving. \nCurrently I have completed 2023 in Java and am working on 2022 in Python. Links to my attempts can be found below through Github repos.",
+    experience: "Java, Python, Ruby",
+    desc: "The Advent of Code is an annual programming puzzle/problem solving event hosted at [adventofcode.com], comprised of 25 daily puzzles to emulate an advent calender. I started doing these in 2023, and have worked through previous years as exercises in learning more about algorithms and problem solving. \nCurrently I have completed 2023 in Java and am working on 2022 in Python, and 2021 in Ruby. Links to my attempts can be found below through Github repos.",
     links: [
       "https://github.com/jofb/advent-of-code-23",
       "https://github.com/jofb/advent-of-code-22",
+      "https://github.com/jofb/advent-of-code-21",
     ],
     images: [],
   },
